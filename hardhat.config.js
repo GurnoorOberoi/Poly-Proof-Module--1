@@ -1,17 +1,19 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 
+const { POLYGON_API_URL, SEPOLIA_API_URL, PRIVATE_KEY } = process.env;
+
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  solidity: "0.8.18",
+  solidity: "0.8.24",
   networks: {
-    mumbai: {
-      url: 'https://rpc-mumbai.maticvigil.com',
-      accounts: [process.env.PRIVATE_KEY],
+    polygon_amoy: {
+      url: POLYGON_API_URL,
+      accounts: [PRIVATE_KEY],
     },
-    goerli: {
-      url: 'https://ethereum-goerli.publicnode.com',
-      accounts: [process.env.PRIVATE_KEY],
+    sepolia: {
+      url: SEPOLIA_API_URL,
+      accounts: [PRIVATE_KEY],
     },
-  }
+  },
 };
