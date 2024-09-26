@@ -47,8 +47,7 @@ The constructor initializes the contract with the name rawrNFT and the symbol RW
 ### Installation
 1. Clone the repository:
   ```shell
-  git clone https://github.com/imankush10/poly-1
-  cd poly-1
+  git clone https://github.com/GurnoorOberoi/Poly-Proof-Module--1
   ```
 2. Install dependencies:
 ```shell
