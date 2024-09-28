@@ -4,11 +4,12 @@ pragma solidity ^0.8.24;
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "erc721a/contracts/ERC721A.sol";
 
+
 contract rawrNFT is ERC721A, Ownable {
     mapping (uint => string) private tokenUrls;
     mapping (uint => string) private prompts;
 
-    constructor() ERC721A("rawrNFT", "RWR") Ownable(msg.sender) {}
+    constructor() ERC721A("rawrNFT", "RWR") Ownable() {}
     
     function mintNft(string[] memory _urls, string[] memory _prompts) public onlyOwner{
         require(_urls.length==_prompts.length, "Invalid metadata");
